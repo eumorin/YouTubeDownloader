@@ -158,7 +158,6 @@ class Application(Tk):
                     self.lb_message.grid(row=2, columnspan=2, sticky=W, pady=(5, 0))
             case 'Save':
                 selected_format = self.box_format.get()
-                print(type(selected_format))
                 download_thread = threading.Thread(target=self.downloader.save_file, args=(selected_format, ))
                 download_thread.start()
 

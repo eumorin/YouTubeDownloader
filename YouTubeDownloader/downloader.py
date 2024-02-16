@@ -43,13 +43,13 @@ class YouTubeDownloader:
                 pattern_abr = r'abr=\"([\d]+kbps)\"'
                 bitrates = re.findall(pattern_abr, filtered_streams_str)
                 bitrates = ['mp3 ' + abr for abr in bitrates]
-                format_box_values = resolutions + bitrates
+                self.format_box_values = resolutions + bitrates
                 if self.streams_dict:
                     self.streams_dict.clear()
                 for i in range(len(filtered_streams)):
-                    self.streams_dict[format_box_values[i]] = filtered_streams[i].itag
+                    self.streams_dict[self.format_box_values[i]] = filtered_streams[i].itag
 
-                video_info = {'thumbnail': self.thumbnail, 'format_box_values': format_box_values, 'title': self.yt.title}
+                video_info = {'thumbnail': self.thumbnail, 'format_box_values': self.format_box_values, 'title': self.yt.title}
                 if self.callback:
                     self.callback('Interface Update', video_info)
         except Exception as e:
