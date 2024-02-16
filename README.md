@@ -2,9 +2,9 @@
 This is a GUI application which allows you to receive a mp4/mp3 files from YouTube by url.
 
 ## Description
-The application features a graphical user interface (GUI) that simplifies the downloading process. Here's how it works:
+The application features a GUI that simplifies the downloading process. Here's how it works:
 
-- **URL Submission:** Paste the URL of the YouTube video they wish to download.
+- **URL Submission:** Paste the URL of the YouTube video you wish to download.
 - **Format Selection:** After submitting the URL, the application processes the available media streams and presents the user with a dropdown list of available formats. Choose one you prefer
 
 ## Quickstart
