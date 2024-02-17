@@ -1,5 +1,5 @@
 # YouTubeDownloader
-This is a GUI application which allows you to receive a mp4/mp3 files from YouTube by url.
+This is a GUI application which allows you to download a mp4/mp3 files from YouTube by url.
 
 ## Description
 The application features a GUI that simplifies the downloading process. Here's how it works:
