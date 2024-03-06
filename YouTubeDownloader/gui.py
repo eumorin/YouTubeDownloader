@@ -2,9 +2,9 @@ from tkinter import *
 from tkinter import ttk, filedialog
 import threading
 import time
-from downloader import *
-from downloader import YouTubeDownloader
-from utils import check_valid_url
+import os
+from .downloader import Downloader
+from .utils import check_valid_url
 
 
 class Application(Tk):
@@ -150,7 +150,7 @@ class Application(Tk):
                     self.lb_message.grid_remove()
 
                 if check_valid_url(self.entry.get()):
-                    self.downloader = YouTubeDownloader(self.entry.get(), self.callback_handler)
+                    self.downloader = Downloader(self.entry.get(), self.callback_handler)
                     download_thread = threading.Thread(target=self.downloader.fetch_video_info)
                     download_thread.start()
                 else:

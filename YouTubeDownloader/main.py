@@ -1,4 +1,4 @@
-from gui import Application
+from YouTubeDownloader.gui import Application
 
 
 def main():
